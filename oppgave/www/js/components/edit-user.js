@@ -20,9 +20,7 @@ class EditUser extends LitElement {
 
   static get styles() {
     return css`
-      .row { display: flex; }
-      .column { width: 50%; padding: 100px; }
-      li { cursor: pointer; font-size: 22px; margin-bottom: 10px; }
+      li { cursor: pointer; font-size: 20px; margin-bottom: 10px; }
     `;
   }
 
@@ -48,15 +46,18 @@ class EditUser extends LitElement {
         <h2>Change password</h2>
         <li>
         <a>New password: </a>
-        <input type = "text">
+        <input type = "password"> 
         </li>
 
         <li>
         <a>Confirm password: </a>
-        <input type = "text">
+        <input type = "password">
         </li>
       </ul>
+      <button type="submit">Submit</button>
     `
+    // Things left to add: button calls updateUser.php, maybe change it into a form??
+    // Also, why are we using php when we learned node?
   }
 
 }
